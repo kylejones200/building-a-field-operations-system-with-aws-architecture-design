@@ -1,13 +1,46 @@
-# Building a field operations system with AWS Architecture Design
+# Building a Field Operations System with AWS Architecture Design
 
-**Published:** 2025-04-17
-**Medium:** [https://medium.com/@kyle-t-jones/building-a-field-operations-system-with-aws-architecture-design-121257004c38](https://medium.com/@kyle-t-jones/building-a-field-operations-system-with-aws-architecture-design-121257004c38)
+This project demonstrates building a field operations system using AWS architecture.
 
-## About
+## Article
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
+Medium article: [Building a Field Operations System with AWS Architecture Design](https://medium.com/@kylejones_47003/building-a-field-operations-system-with-aws-architecture-design-121257004c38)
 
-## Files
+## Project Structure
 
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
+```
+.
+├── README.md           # This file
+├── main.py            # Main entry point
+├── config.yaml        # Configuration file
+├── requirements.txt   # Python dependencies
+├── src/               # Core functions
+│   ├── core.py        # Field operations functions
+│   └── plotting.py    # Tufte-style plotting utilities
+├── tests/             # Unit tests
+├── data/              # Data files
+└── images/            # Generated plots and figures
+```
+
+## Configuration
+
+Edit `config.yaml` to customize:
+- Data source or synthetic generation
+- Number of assets
+- AWS services configuration
+- Output settings
+
+## AWS Architecture
+
+AWS services for field operations:
+- **IoT Core**: Device connectivity
+- **ECS**: Container orchestration
+- **RDS**: Database management
+- **S3**: Data storage
+- **CloudWatch**: Monitoring and logging
+
+## Caveats
+
+- By default, generates synthetic field operations data.
+- Full AWS deployment requires AWS credentials and infrastructure setup.
+- Real-world implementation requires proper security and scaling.
