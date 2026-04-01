@@ -33,7 +33,7 @@ def analyze_field_operations(df: pd.DataFrame, asset_cols: list) -> Dict:
     }
 
 def plot_field_operations(df: pd.DataFrame, asset_cols: list, title: str, output_path: Path):
- """Plot field operations data """
+    """Plot field operations data """
     fig, ax = plt.subplots(figsize=(10, 6))
     
     for i, col in enumerate(asset_cols[:5]):
