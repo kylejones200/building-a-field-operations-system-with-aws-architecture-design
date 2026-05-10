@@ -32,17 +32,18 @@ def analyze_field_operations(df: pd.DataFrame, asset_cols: list) -> Dict:
         'std_values': df[asset_cols].std().to_dict()
     }
 
-def plot_field_operations(df: pd.DataFrame, asset_cols: list, title: str, output_path: Path):
+def plot_field_operations(df: pd.DataFrame, asset_cols: list, title: str, output_path: Path, plot: bool = False):
     """Plot field operations data """
-    fig, ax = plt.subplots(figsize=(10, 6))
+    if plot:
+        fig, ax = plt.subplots(figsize=(10, 6))
     
-    for i, col in enumerate(asset_cols[:5]):
-        ax.plot(df['timestamp'], df[col], label=col, linewidth=1.2, alpha=0.7)
+        for i, col in enumerate(asset_cols[:5]):
+            ax.plot(df['timestamp'], df[col], label=col, linewidth=1.2, alpha=0.7)
     
-    ax.set_xlabel("Time")
-    ax.set_ylabel("Value")
-    ax.legend(loc='best', ncol=2)
+        ax.set_xlabel("Time")
+        ax.set_ylabel("Value")
+        ax.legend(loc='best', ncol=2)
     
-    plt.savefig(output_path, dpi=100, bbox_inches="tight")
-    plt.close()
+        plt.savefig(output_path, dpi=100, bbox_inches="tight")
+        plt.close()
 
