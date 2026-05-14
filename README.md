@@ -33,11 +33,11 @@ Edit `config.yaml` to customize:
 ## AWS Architecture
 
 AWS services for field operations:
-- **IoT Core**: Device connectivity
-- **ECS**: Container orchestration
-- **RDS**: Database management
-- **S3**: Data storage
-- **CloudWatch**: Monitoring and logging
+- IoT Core: Device connectivity
+- ECS: Container orchestration
+- RDS: Database management
+- S3: Data storage
+- CloudWatch: Monitoring and logging
 
 ## Caveats
 
