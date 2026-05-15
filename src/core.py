@@ -3,7 +3,6 @@
 import numpy as np
 import pandas as pd
 from pathlib import Path
-from typing import Dict
 import matplotlib.pyplot as plt
 import logging
 
@@ -23,7 +22,7 @@ def simulate_field_operations_data(n_points: int, n_assets: int = 5, seed: int =
     
     return pd.DataFrame(data)
 
-def analyze_field_operations(df: pd.DataFrame, asset_cols: list) -> Dict:
+def analyze_field_operations(df: pd.DataFrame, asset_cols: list) -> dict:
     """Analyze field operations data."""
     return {
         'n_samples': len(df),
