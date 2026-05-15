@@ -38,7 +38,7 @@ def main():
     elif config['data']['generate_synthetic']:
                 df = simulate_field_operations_data(config['data']['n_points'], config['data']['n_assets'],
                                           config['data']['seed'])
-        asset_cols = [col for col in df.columns if col != 'timestamp']
+                asset_cols = [col for col in df.columns if col != 'timestamp']
     else:
         raise ValueError("No data source specified")
     
