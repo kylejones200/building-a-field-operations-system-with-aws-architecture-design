@@ -44,3 +44,11 @@ AWS services for field operations:
 - By default, generates synthetic field operations data.
 - Full AWS deployment requires AWS credentials and infrastructure setup.
 - Real-world implementation requires proper security and scaling.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

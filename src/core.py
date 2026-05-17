@@ -45,15 +45,17 @@ def plot_field_operations(
     plot: bool = False,
 ):
     """Plot field operations data"""
-    if plot:
-        fig, ax = plt.subplots(figsize=(10, 6))
+    if not plot:
+        return
 
-        for i, col in enumerate(asset_cols[:5]):
-            ax.plot(df["timestamp"], df[col], label=col, linewidth=1.2, alpha=0.7)
+    fig, ax = plt.subplots(figsize=(10, 6))
 
-        ax.set_xlabel("Time")
-        ax.set_ylabel("Value")
-        ax.legend(loc="best", ncol=2)
+    for i, col in enumerate(asset_cols[:5]):
+        ax.plot(df["timestamp"], df[col], label=col, linewidth=1.2, alpha=0.7)
 
-        plt.savefig(output_path, dpi=100, bbox_inches="tight")
-        plt.close()
+    ax.set_xlabel("Time")
+    ax.set_ylabel("Value")
+    ax.legend(loc="best", ncol=2)
+
+    plt.savefig(output_path, dpi=100, bbox_inches="tight")
+    plt.close()
