@@ -2,6 +2,14 @@
 
 This project demonstrates building a field operations system using AWS architecture.
 
+## Business context
+
+Field operations is how industrial companies run (oil and gas, utilities, construction, infrastructure maintenance, etc). Many field data collection processes are fragmented. They are a mix of handwritten notes, local sensors, edge devices, and manual uploads. These inefficiencies don't just cost time; they limit visibility, delay decisions, and put compliance at risk.
+
+This guide walks through an integrated solution built on AWS to connect your field workflow from edge to cloud that supports real-time analysis, seamless access, and data-driven decisions.
+
+A modern field operations system needs to accept input in multiple formats --- physical notes, sensor streams, digital forms, and video feeds. AWS provides services to ingest all of them.
+
 ## Article
 
 Medium article: [Building a Field Operations System with AWS Architecture Design](https://medium.com/@kylejones_47003/building-a-field-operations-system-with-aws-architecture-design-121257004c38)
