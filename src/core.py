@@ -1,14 +1,10 @@
 """Core functions for building field operations system with AWS architecture."""
 
-import logging
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
-# Configure logging
-logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 
 def simulate_field_operations_data(
@@ -17,7 +13,6 @@ def simulate_field_operations_data(
     """Simulate field operations data."""
     np.random.seed(seed)
     timestamps = pd.date_range("2023-01-01", periods=n_points, freq="1H")
-
     data = {"timestamp": timestamps}
     for i in range(n_assets):
         base_value = 100 + i * 20
@@ -49,13 +44,11 @@ def plot_field_operations(
         return
 
     fig, ax = plt.subplots(figsize=(10, 6))
-
     for i, col in enumerate(asset_cols[:5]):
         ax.plot(df["timestamp"], df[col], label=col, linewidth=1.2, alpha=0.7)
 
     ax.set_xlabel("Time")
     ax.set_ylabel("Value")
     ax.legend(loc="best", ncol=2)
-
     plt.savefig(output_path, dpi=100, bbox_inches="tight")
     plt.close()
